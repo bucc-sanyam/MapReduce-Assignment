@@ -1,0 +1,11 @@
+### Sqoop script to import into HBase
+    sqoop import \
+    --connect "jdbc:mysql://<RDS Endpoint>/<DB Name>" \
+    --username <Username> \
+    --password <Password> \
+    --table <Tabler Name> \
+    --target-dir <Path to Directory> \
+    --hbase-table <HBase Table Name> --column-family cf1 --hbase-create-table \
+    --hbase-row-key tpep_pickup_datetime,tpep_dropoff_datetime \
+    --hbase-bulkload \
+    --split-by VendorID
