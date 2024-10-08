@@ -20,16 +20,6 @@
 ### Run all these commands in sequential order if you face any error regarding thrift library.
 
     sudo yum update
-    sudo yum install gcc -y
+    sudo yum install gcc 
     sudo yum install python3-devel
-    sudo yum groupinstall "Development Tools"
-    pip install --user --upgrade pip setuptools wheel
-    pip install --user thriftpy2
-    pip install --user happybase
-    pip install --user mrjob
-
-
-
-
-
-    
+    pip install happybase mrjob    
